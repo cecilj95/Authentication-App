@@ -1,0 +1,71 @@
+<!---->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>New User</title>
+	<style>
+        .a{
+            text-align:center;
+            padding:20px;
+            background-color:tomato;
+        }
+	body{
+		background-image:url('https://registrationmagic.com/wp-content/uploads/2016/05/User-Registration-Plugin.jpg');
+		background-position:center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+		text-align:center;}
+            
+        </style>
+	<script>
+		function newuser(){
+		var fname=document.forms["userre"]["fname"].value;
+		var lname=document.forms["userre"]["lname"].value;
+		var phone=document.forms["userre"]["phone"].value;
+		var email=document.forms["userre"]["email"].value;
+		var pass1=document.forms["userre"]["pass1"].value;
+		var pass2=document.forms["userre"]["pass2"].value;
+			{
+			if(fname==null||fname==""){
+			alert("Enter name!");
+			return false;}
+			else if(lname==null||lname==""){
+			alert("Enter last name!");
+			return false;}
+			else if(phone==null||phone==""){
+			alert("Enter mobile number!");
+			return false;}
+			else if(email==null||email==""){
+			alert("Enter Email ID!");
+			return false;}	
+			else if(pass1==null||pass2==null||pass1==""||pass2==""){
+			alert("Check your passwords!");
+			return false;}
+			}
+			}
+	</script>
+</head>
+<body>
+ <h2>New user Registration</h2>
+        <div class="a">
+	<form method="post" name="userre" onsubmit="return newuser()">
+        <p>First name <input type="text" id="a" name="fname" palceholder:"your name"/><br/><br/>
+        last name <input type="text" id="b" name="lname" palceholder:"your name"/><br/><br/>
+        Mobile number <input  type="number" id="c" name="phone"/><br/><br/>
+        Email id<input  type="email" id="d" name="email"/><br/><br/>
+        Gender:<input type="radio" name="m">Male<input type="radio" name="f">Female<br/><br/>
+        Pasword:<input  type="password" id="e" name="pass1"><br/><br/>
+       Retype Pasword:<input  type="password" id="f" name="pass2"><br/><br/>
+       D.O.B<input type="date" name="dob" min="01-01-1990" max="31-12-2009"><br/><br/>
+        alternative number:<input type="number" name="alphone"/><br/><br/>
+        <input type="checkbox" checked>I have read <a href="userin.html">user instructions</a><br/><br/>
+       <input type="submit" value="Submit">
+       <p>Already have account?<a href="login.html">Click to login</a></p>
+        </p>
+	</form>
+        </div>
+</body>
+</html>
