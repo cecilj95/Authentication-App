@@ -1,6 +1,19 @@
-<html>
-    <head>
-        <title>Login page</title>
+<?php 
+session_start();
+    include("connect.php");
+    include("function.php");
+    
+    
+ ?>
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	
+ </head>
+ <body>
+ <title>Login page</title>
         <style>
             .center{
                 background-color:slateblue;
@@ -11,7 +24,7 @@
 		color:white;
             }
 	body{
-		background-image:url('college.jfif');
+		background-image:linear-gradient(tomato,skyblue);
 		background-position:center;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
@@ -20,7 +33,7 @@
 		a{
 			color:white;}
 		h2{
-			color:#cc6600;
+			color:black;
 			align:center;
 		}
         </style>
@@ -42,14 +55,15 @@
         </script>
     </head>
    <body>
-	<img src="logo.jpg" height="60px" width="60px";/><h3>Arts college</h3><br/>
 	<h2>User Login</h2>
         <form class="center" name="log" method="post" onsubmit="login()">
-            Username:<input type=text" name="uname"><br/><br/>
-            Password:<input type="password" name="pass"><br/><br/>
+            Username:<input type="text" name="user_name"><br/><br/>
+            Password:<input type="password" name="password"><br/><br/>
             <input type="submit" value="Submit"><br/>
-	<a href="forgot.html" "/" target="_blank">Forgot password?</a>
-	<a href="newuser.html" "/" target="_blank">New User?</a> 
+	<a href="sign.php">New User?</a> 
         </form>
-    </body>
-</html>
+
+ </body>
+ </html>
+
+        
