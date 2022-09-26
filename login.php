@@ -3,6 +3,7 @@ session_start();
     include("connect.php");
     include("function.php");
     
+
     if($_SERVER['REQUEST_METHOD']=="POST")
     {
         //user given data
@@ -36,7 +37,7 @@ session_start();
            echo '<script>alert("Please enter some valid information!!")</script>';
         }
         }
-    
+
  ?>
  <!DOCTYPE html>
  <html>
@@ -49,6 +50,8 @@ session_start();
  <title>Login page</title>
         <style>
             .center{
+                background-color:slateblue;
+
                 text-align:center;
                 margin:auto;
                 width:70%;
@@ -56,7 +59,10 @@ session_start();
 		color:white;
             }
 	body{
+
 		background-image:url('https://images.unsplash.com/photo-1497864149936-d3163f0c0f4b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80');
+		background-image:linear-gradient(tomato,skyblue);
+
 		background-position:center;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
@@ -65,7 +71,10 @@ session_start();
 		a{
 			color:white;}
 		h2{
+
 			color:mintcream;
+			color:black;
+
 			align:center;
 		}
         </style>
@@ -92,7 +101,9 @@ session_start();
             Username:<input type="text" name="user_name"><br/><br/>
             Password:<input type="password" name="password"><br/><br/>
             <input type="submit" value="Submit"><br/>
+
 	<a href="sign.php">Sign up here</a> 
+	<a href="sign.php">New User?</a> 
         </form>
 
  </body>
